@@ -1,0 +1,1 @@
+C:\Users\OTC\Documents\GitHub\ClickFree\clickfree_Maui\clickfree_Maui.csproj;x64

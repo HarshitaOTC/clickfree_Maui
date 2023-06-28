@@ -1,0 +1,203 @@
+is_global = true
+build_property.TargetFramework = net6.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = clickfree_Maui
+build_property.ProjectDir = C:\Users\OTC\Documents\GitHub\ClickFree\clickfree_Maui\
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Continue.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Continue.xaml
+build_metadata.AdditionalFiles.TargetPath = Continue.xaml
+build_metadata.AdditionalFiles.RelativePath = Continue.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Continue_facebook.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Continue_facebook.xaml
+build_metadata.AdditionalFiles.TargetPath = Continue_facebook.xaml
+build_metadata.AdditionalFiles.RelativePath = Continue_facebook.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Themes/DarkTheme.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Themes.DarkTheme.xaml
+build_metadata.AdditionalFiles.TargetPath = Themes\DarkTheme.xaml
+build_metadata.AdditionalFiles.RelativePath = Themes\DarkTheme.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/BackupFacebookDestView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.BackupFacebookDestView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BackupFacebookDestView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BackupFacebookDestView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/BackupFacebookMainView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.BackupFacebookMainView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BackupFacebookMainView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BackupFacebookMainView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/BackupFacebookSelectImagesView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.BackupFacebookSelectImagesView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BackupFacebookSelectImagesView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BackupFacebookSelectImagesView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/BackupInstagramDestView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.BackupInstagramDestView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BackupInstagramDestView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BackupInstagramDestView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/BackupInstagramMainView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.BackupInstagramMainView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BackupInstagramMainView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BackupInstagramMainView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/BackupInstagramSelectImagesView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.BackupInstagramSelectImagesView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BackupInstagramSelectImagesView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BackupInstagramSelectImagesView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/BackupToUSBMainView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.BackupToUSBMainView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BackupToUSBMainView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BackupToUSBMainView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/BackupToUSBSelectView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.BackupToUSBSelectView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BackupToUSBSelectView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BackupToUSBSelectView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/DefaultFolderView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.DefaultFolderView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DefaultFolderView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DefaultFolderView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/EraseDevice.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.EraseDevice.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EraseDevice.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EraseDevice.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/MainView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.MainView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/SecondPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.SecondPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SecondPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SecondPage.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Views/TransferView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Views.TransferView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TransferView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TransferView.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/BackupFromFacebookWindow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.BackupFromFacebookWindow.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\BackupFromFacebookWindow.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\BackupFromFacebookWindow.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/BackupFromInstagramWindow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.BackupFromInstagramWindow.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\BackupFromInstagramWindow.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\BackupFromInstagramWindow.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/BackupToClickFreeWindow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.BackupToClickFreeWindow.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\BackupToClickFreeWindow.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\BackupToClickFreeWindow.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/ClickFreeFormatProgress.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.ClickFreeFormatProgress.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\ClickFreeFormatProgress.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\ClickFreeFormatProgress.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/ConfirmationWindow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.ConfirmationWindow.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\ConfirmationWindow.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\ConfirmationWindow.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/ContactusWindow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.ContactusWindow.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\ContactusWindow.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\ContactusWindow.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/FacebookLoginwindow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.FacebookLoginwindow.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\FacebookLoginwindow.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\FacebookLoginwindow.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/FormatClickFreeWindow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.FormatClickFreeWindow.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\FormatClickFreeWindow.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\FormatClickFreeWindow.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/InstagramLoginWindow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.InstagramLoginWindow.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\InstagramLoginWindow.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\InstagramLoginWindow.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/MessageBoxWindow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.MessageBoxWindow.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\MessageBoxWindow.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\MessageBoxWindow.xaml
+
+[C:/Users/OTC/Documents/GitHub/ClickFree/clickfree_Maui/Windows/TransferToPCView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = clickfree_Maui.Windows.TransferToPCView.xaml
+build_metadata.AdditionalFiles.TargetPath = Windows\TransferToPCView.xaml
+build_metadata.AdditionalFiles.RelativePath = Windows\TransferToPCView.xaml

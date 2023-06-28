@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickfree_Maui.Views.BackupInstagramDestView"
+             BackgroundColor="#2a2c30" NavigationPage.IconColor="White">
+    <StackLayout  Padding="10" VerticalOptions="Center" >
+        <Button Text="Transfer to Click Free USB"  WidthRequest="350" Margin="5" CornerRadius="20" BackgroundColor="#3FA8E3" TextColor="White" Command="{Binding TransferToUSBCommand}"/>
+        <Button Text="Transfer to Click Free PC Folder"  WidthRequest="350" CornerRadius="20" BackgroundColor="#3FA8E3"  Margin="5" TextColor="White" Command="{Binding TransferClickFreePCFolderCommand}"/>
+        <Button Text="Choose folder manually"  Margin="5"  WidthRequest="350" CornerRadius="20" BackgroundColor="#3FA8E3" TextColor="White" Command="{Binding TransferToSelectedFolderCommand}"/>
+    </StackLayout>
+
+</ContentPage>

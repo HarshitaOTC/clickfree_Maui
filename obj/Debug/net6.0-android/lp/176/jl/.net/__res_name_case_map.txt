@@ -1,0 +1,5 @@
+Platforms/Android/Resources/Layout/radextendedlistview_scrollbars.xml;layout/radextendedlistview_scrollbars.xml
+Platforms/Android/Resources/Layout/androidnativezoomview_scrollbars.xml;layout/androidnativezoomview_scrollbars.xml
+Platforms/Android/Resources/Layout/radextendedlistview_scrollbars.xml;layout/radextendedlistview_scrollbars.xml
+Platforms/Android/Resources/Layout/androidnativezoomview_scrollbars.xml;layout/androidnativezoomview_scrollbars.xml
+Platforms/Android/Resources/Layout/table_layout.xml;layout/table_layout.xml

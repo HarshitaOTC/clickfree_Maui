@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickfree_Maui.Windows.ConfirmationWindow"
+             xmlns:local="clickfree_Maui.Windows"
+             Title="ConfirmationWindow" BackgroundColor="#2a2c30">
+    <VerticalStackLayout>
+        <Grid>
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" x:Name="FormatPanel" IsVisible="Visible">
+
+                <Label  TextColor="White" HorizontalOptions="Center" FontSize="18" Text="Are you sure to format the USB?" Margin="10,30,10,0" FontFamily="Josefin Sans">
+               
+                </Label>
+                <StackLayout Orientation="Horizontal" VerticalOptions="End" Margin="0,40,00,0" HorizontalOptions="Center">
+                    <Button BackgroundColor="#3FA8E3" x:Name="yesBtn" Text="Yes" TextColor="White" HorizontalOptions="Center"
+                    Margin="20"  Clicked="YesButton_Click"/>
+                    <Button BackgroundColor="#3FA8E3" Text="No" TextColor="White" HorizontalOptions="Center"
+                    Margin="20" Clicked="NoButton_Click"/>
+                </StackLayout>
+
+            </StackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

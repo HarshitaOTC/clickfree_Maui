@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickfree_Maui.Windows.FormatClickFreeWindow"
+             xmlns:Local="clr-namespace:clickfree_Maui.Windows"
+           
+             Title="FormatClickFreeWindow" Loaded="Window_Loaded" BackgroundColor="#2a2c30" >
+    <StackLayout>
+        <!--<telerik:RadComboBox x:Name="UsbListComboBox" Margin="10,50,10,0"  Background="White" BackgroundColor="White" TextColor="Black"></telerik:RadComboBox>-->
+                    <!--<ComboBox Name="UsbListComboBox" Width="350" Height="25" HorizontalAlignment="Center" Margin="20"
+                      Foreground="Black" Background="White" Text="Select the USB" SelectionChanged="UsbListComboBox_SelectionChanged">
+                </ComboBox>-->
+        <Picker x:Name="UsbListComboBox" WidthRequest="150" Margin="10,50,10,0"  Background="White" BackgroundColor="White" TextColor="Black"></Picker>
+        <StackLayout Orientation="Horizontal" Margin="0,30,0,0" HorizontalOptions="Center" >
+            <Button BackgroundColor="#3FA8E3" x:Name="FormatBtn" TextColor="White" Clicked="FormatBtn_Clicked" Text="Format"  HorizontalOptions="Center"
+                    Margin="30" />
+            <Button BackgroundColor="#3FA8E3" x:Name="CancelBtn" TextColor="White"  Text="Cancel" Clicked="CloseWindow_Clicked" HorizontalOptions="Center"
+                    Margin="30" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

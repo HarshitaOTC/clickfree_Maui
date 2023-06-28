@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickfree_Maui.Views.TransferView"
+            BackgroundColor="#2a2c30" NavigationPage.HasNavigationBar="True" NavigationPage.BackButtonTitle="Main" NavigationPage.IconColor="White">
+  
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid VerticalOptions="Start" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <!--<Button HeightRequest="40" BackgroundColor="#3E8EED" Text="Main" TextColor="Black" Background="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+
+                </Button>-->
+
+                <!--<Button Grid.Column="2" Height="40"
+                    VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" 
+                    Style="{StaticResource FlatButtonStyle}" Command="{Binding Path=Navigation.ContactUSCommand}" HorizontalAlignment="Right" VerticalAlignment="Top" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="30"  Source="/ClickFree;component/Resources/Navigation/e_email_letter_mail_icon.png" Margin="0,5,5,0" VerticalAlignment="Top"/>
+                    <TextBlock Text="Email Support" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="SemiBold" Foreground="White" FontSize="14" 
+                               Margin="0,0,10,0"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Grid.Column="3" Height="40"
+                    VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" 
+                    Style="{StaticResource FlatButtonStyle}" Command="{Binding Path=Navigation.ChatSupportCommand}" HorizontalAlignment="Right" VerticalAlignment="Top" >
+                <Image Height="20" Width="128" Source="/ClickFree;component/Resources/ChatSupport.png"  Margin="0,10,20,0" VerticalAlignment="Top"/>
+            </Button>-->
+            </Grid>
+
+            <Grid Margin="10" WidthRequest="550" Grid.Row="1" HeightRequest="450">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label  Text="Transfer your photos and videos to PC" TextColor="White" FontSize="Small" HorizontalOptions="Start" FontAttributes="Bold"  HeightRequest="30"  
+                       Margin="10,0,0,0" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Choose the folder where you'd like to save your photos and videos on your computer" 
+                       Margin="10,0,0,0" TextColor="White" FontSize="Caption" HorizontalOptions="Start" Grid.Row="1" Grid.Column="1"/>
+
+                <Grid HorizontalOptions="Center" VerticalOptions="Start"  Margin="0,0,0,0" HeightRequest="150" WidthRequest="472" Grid.Row="1"  Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+
+                    </Grid.RowDefinitions>
+                    <Entry x:Name="Path" HorizontalOptions="Start" TextColor="White"  BackgroundColor="#2a2c30" Margin="10,0,0,0" IsReadOnly="True"  Text="{Binding CurrentDir}"  VerticalOptions="Center" Grid.Row="0" HeightRequest="30" WidthRequest="350" Grid.Column="0"/>
+                    <Button x:Name="Folderpicker" BackgroundColor="#2a2c30"  Text="..." FontSize="Micro"  FontAttributes="Bold" TextColor="White"  HeightRequest="40" WidthRequest="40" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Clicked="Folderpicker_Clicked"></Button>
+                </Grid>
+
+                <Button x:Name="Transfer_Btn" BackgroundColor="#3FA8E3" VerticalOptions="Start" CornerRadius="20" Command="{Binding TransferCommand}"  HorizontalOptions="Center"  Grid.Row="3" WidthRequest="150" HeightRequest="40" Margin="20,00,20,20"  Grid.Column="1" Grid.ColumnSpan="3"
+                    Text="Transfer" ></Button>
+            </Grid>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

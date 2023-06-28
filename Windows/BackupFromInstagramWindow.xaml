@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickfree_Maui.Windows.BackupFromInstagramWindow"
+              Loaded="ContentPage_Loaded"  BackgroundColor="#2a2c30" NavigationPage.HasNavigationBar="False">
+    <StackLayout >
+        <Grid Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Label Text="Backup your photos and videos" TextColor="White" VerticalOptions="End" FontSize="Micro" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0"/>
+
+            <Grid Grid.Row="1" Margin="10,30,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Text="Processing" TextColor="White" Margin="10,0,0,0" IsEnabled="False" />
+
+                <ProgressBar x:Name="progress"  Grid.Row="1" BackgroundColor="White" Progress="{Binding CurrentPosition}" Margin="10,0,0,0" HeightRequest="10" />
+
+                <Label x:Name="status" TextColor="White"  Text="{Binding Status}" Grid.Row="2" Margin="10,0,0,0"
+                         ></Label>
+
+            </Grid>
+
+            <Button Text="Cancel" Grid.Row="2" Margin="0,10,0,0" BackgroundColor="#3E8EED" Clicked="Button_Clicked" Command="{Binding CancelCommand}" VerticalOptions="End"  HorizontalOptions="Center"/>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

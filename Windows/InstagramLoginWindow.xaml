@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickfree_Maui.Windows.InstagramLoginWindow"
+             Title="InstagramLoginWindow"  >
+
+    <StackLayout  Margin="10">
+       
+
+        <Grid x:Name="grid" VerticalOptions="StartAndExpand" IsVisible="true" Margin="5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <WebView x:Name="webviewNew" Grid.Row="0"  Navigated="webview_Navigated"  Loaded="Webview_Loaded"   ></WebView>
+           
+        </Grid>
+        <!--<Grid x:Name="grid1">
+            <Button Text="Close" Grid.Row="1" Clicked="Button_Clicked" VerticalOptions="Start"></Button>
+        </Grid>-->
+        
+   
+
+    </StackLayout>
+</ContentPage>

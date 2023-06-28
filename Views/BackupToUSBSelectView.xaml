@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:vm="clr-namespace:clickfree_Maui.ViewModel"
+             x:Class="clickfree_Maui.Views.BackupToUSBSelectView" BackgroundColor="#2a2c30" NavigationPage.IconColor="White" >
+    <ContentPage.BindingContext>
+        <vm:BackupToUSBSelectVM >
+
+        </vm:BackupToUSBSelectVM>
+
+    </ContentPage.BindingContext>
+
+
+
+    <VerticalStackLayout HorizontalOptions="Center">
+
+        <CollectionView ItemsSource="{Binding Name}" 
+                SelectionMode="Single" >
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" />
+            </CollectionView.ItemsLayout>
+        </CollectionView>
+        <Label Text="Backup your photos and videos to USB" VerticalOptions="Start" HorizontalOptions="Start"
+                   Margin="10,0,0,0"  TextColor="White" FontSize="Micro" />
+
+        <Label Text="Select video and photo files to back up" VerticalOptions="Start" HorizontalOptions="Start"
+                   Margin="10,8,0,0" FontSize="12" TextColor="#B2B2B2"/>
+
+
+
+        <!--first list-->
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="250"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="My PC" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start"
+                   Margin="10,10,0,0" FontSize="13" TextColor="White"/>
+            <Button Text="Select All" Command="{Binding SelectAllCommand}" Margin="10,0,0,10" TextColor="SteelBlue" BackgroundColor="Transparent" BorderColor="SteelBlue" HeightRequest="35" WidthRequest="100" Grid.Row="0" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="End" />
+
+
+            <ListView BackgroundColor="Black"  x:Name="icHeaders" ItemsSource="{Binding Headers}" 
+                    Grid.Row="1" Grid.Column="0" HorizontalOptions="Start"  VerticalOptions="Start" HeightRequest="35" WidthRequest="300">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="Center" x:Name="label5"  Grid.Column="0"  TextColor="White" Text="{Binding Path}">
+
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <StackLayout Margin="0,36,0,0" Grid.Row="1" Grid.Column="0">
+                <Grid x:Name="TestGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="250"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <ListView x:Name="lbSource" Margin="0"  Grid.Row="0" Grid.Column="0" HeightRequest="250" WidthRequest="250"
+                ItemsSource="{Binding CurrentDirList}"  SelectedItem="{Binding CurrentDirSelectedItem}"  SelectionMode="Single"
+                              ItemSelected="lbSource_ItemSelected"
+                              HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="Black">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Margin="10,0,10,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition  />
+                                            <ColumnDefinition  />
+                                           
+                                        </Grid.ColumnDefinitions>
+                                        <!--<Button Grid.Column="1" Margin="80,02,02,02" VerticalOptions="Center" Text="+" TextColor="White" BorderColor="White" HorizontalOptions="Center" CornerRadius="5" HeightRequest="20" WidthRequest="30" Command="{Binding Path=BindingContext.AddToSelectedCommand,Source={x:Reference lbSource}}" CommandParameter="{Binding}"/>-->
+                                        <Button Text="+" HeightRequest="20"  CornerRadius="0" WidthRequest="30" Padding="2" TextColor="#3FA8E3" VerticalOptions="Center" HorizontalOptions="Center"  Grid.Column="1"   Margin="50,00,02,00" Grid.Row="0" Command="{Binding Path=BindingContext.AddToSelectedCommand,Source={x:Reference lbSource}}" CommandParameter="{Binding}" BorderColor="#3FA8E3" BackgroundColor="Transparent"></Button>
+                                        <Label HorizontalTextAlignment="Start" FontSize="Micro" x:Name="label1"  Grid.Column="0"  TextColor="White" Text="{Binding Name}" Margin="5">
+
+                                            <Label.GestureRecognizers>
+                                                <DragGestureRecognizer DragStartingCommand="{Binding Source={x:RelativeSource AncestorType={x:Type vm:BackupToUSBSelectVM}},Path=DragStartedCommand}" 
+                                                   DragStartingCommandParameter="{Binding .}" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+                </Grid>
+            </StackLayout>
+
+            <Border  Background="Black" BackgroundColor="Black" StrokeThickness="0"
+                    Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Start" Margin="5,0,0,0" HeightRequest="35" WidthRequest="247">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="2" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                </Grid>
+
+            </Border>
+            <Label Text="Windows backup" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalOptions="Start" HorizontalOptions="Start"
+                   Margin="10,10,0,0" FontSize="13" TextColor="White"/>
+            <Button Text="Clear All" Command="{Binding ClearAllCommand}" Margin="10,0,0,10" TextColor="SteelBlue" BackgroundColor="Transparent" BorderColor="SteelBlue" HeightRequest="35" WidthRequest="100" Grid.Row="0" Grid.Column="1" VerticalOptions="Start" HorizontalOptions="End" />
+
+            <StackLayout Margin="05,36,0,0" Grid.Row="1" Grid.Column="1">
+                <ListView x:Name="lbsource1" Margin="0" VerticalScrollBarVisibility="Default"  HeightRequest="250" WidthRequest="250"
+         ItemsSource="{Binding SelectedDirList}"  HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="Black">
+                    <ListView.GestureRecognizers>
+                        <DropGestureRecognizer DropCommand="{Binding TaskDropedCommand}" DropCommandParameter="3" />
+                    </ListView.GestureRecognizers>
+                    <ListView.ItemTemplate>
+
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="10,0,10,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30*" />
+                                        <ColumnDefinition Width="30*" />
+                                        <ColumnDefinition Width="30*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label x:Name="label1"  Grid.Column="0" TextColor="White" BackgroundColor="Black" Text="{Binding Name}">
+
+                                    </Label>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+
+        </Grid>
+
+        <Button x:Name="btnBackup" Margin="10,10,0,0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="#3FA8E3"
+                Text="Backup" Command="{Binding BackupCommand}"
+                />
+
+    </VerticalStackLayout>
+
+</ContentPage>

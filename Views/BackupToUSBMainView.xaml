@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickfree_Maui.Views.BackupToUSBMainView" BackgroundColor="#2a2c30" NavigationPage.IconColor="White" >
+    <StackLayout HorizontalOptions="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+           
+
+
+            <Label Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Title" TextColor="White"  Text="Backup your photos and videos to USB" />
+
+            <Button Grid.Row="1" WidthRequest="350" HeightRequest="50" FontSize="Micro" TextColor="White" BackgroundColor="#3FA8E3" HorizontalOptions="Center" CornerRadius="15" VerticalOptions="Center"  Command="{Binding TransferDefaultCommand}" Text="Backup All Media From Default Folders"/>
+
+
+
+            <Button  TextColor="White" WidthRequest="350" HeightRequest="50"  FontSize="Micro" BackgroundColor="#3FA8E3" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="15" Text="Select Photos and Videos Manually" Grid.Row="2"  Command="{Binding TransferSelectedFilesCommand}"  />
+                
+           
+        </Grid>
+    </StackLayout>
+</ContentPage>

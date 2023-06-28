@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>clickfree_Maui</name>
+    </assembly>
+    <members>
+        <member name="M:clickfree_Maui.Helpers.DriveManager.DriverWindow.ToUnitName(System.Int32)">
+            <summary>
+            Translate the dbcv_unitmask bitmask to a drive letter by finding the first
+            enabled low-order bit; its offset equals the letter where offset 0 is 'A'.
+            </summary>
+        </member>
+        <member name="E:clickfree_Maui.Helpers.TransferManager.AppleFormatDetected">
+            <summary>
+            /*true - convert, false - leave as it is, null - cancel operation*/
+            </summary>
+        </member>
+        <member name="T:clickfree_Maui.ViewModel.BackupToUSBSelectVM">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:clickfree_Maui.ViewModel.BackupToUSBSelectVM.dragStartedCommand">
+            <summary>The backing field for <see cref="P:clickfree_Maui.ViewModel.BackupToUSBSelectVM.DragStartedCommand"/>.</summary>
+        </member>
+        <member name="P:clickfree_Maui.ViewModel.BackupToUSBSelectVM.DragStartedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:clickfree_Maui.ViewModel.BackupToUSBSelectVM.DragStarted(clickfree_Maui.ViewModel.BackupToUSBSelectVM.IOInfoBase)"/>.</summary>
+        </member>
+        <member name="F:clickfree_Maui.ViewModel.BackupToUSBSelectVM.taskDropedCommand">
+            <summary>The backing field for <see cref="P:clickfree_Maui.ViewModel.BackupToUSBSelectVM.TaskDropedCommand"/>.</summary>
+        </member>
+        <member name="P:clickfree_Maui.ViewModel.BackupToUSBSelectVM.TaskDropedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:clickfree_Maui.ViewModel.BackupToUSBSelectVM.TaskDroped"/>.</summary>
+        </member>
+    </members>
+</doc>

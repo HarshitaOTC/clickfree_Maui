@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:b="clr-namespace:clickfree_Maui.ViewModel"
+             x:Class="clickfree_Maui.Windows.BackupToClickFreeWindow"
+             Title="BackupToClickFreeWindow" Loaded="ContentPage_Loaded" BackgroundColor="#2a2c30">
+    <VerticalStackLayout Padding="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="40"/>
+               
+            </Grid.RowDefinitions>
+
+            <Label Text="Backup your photos and videos to USB" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="End" FontSize="Micro" Grid.Row="0"
+                   TextColor="White" />
+            <StackLayout Grid.Row="1" Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label  Margin="0,10,0,0" FontSize="Micro" Grid.Row="0" Text="Progress" TextColor="White" />
+                <ProgressBar x:Name="progress" BackgroundColor="White" Margin="0,5,0,0" Grid.Row="1" HeightRequest="8" BindingContext="{Binding CurrentSize}"/>
+
+                <Label x:Name="status" Text="{Binding Status}"  Grid.Row="2" Margin="0,7,0,0"
+                       FontFamily="Montserrat" FontSize="Micro"    TextColor="White"/>
+            </Grid>
+            </StackLayout>
+
+            <Button Text="Cancel" Margin="0,0,50,0" Grid.Row="2" VerticalOptions="Start" HorizontalOptions="Center"
+                Command="{Binding CancelCommand}" Clicked="Button_Clicked"
+                />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

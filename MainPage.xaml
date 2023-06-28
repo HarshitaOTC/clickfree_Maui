@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickfree_Maui.MainPage" BackgroundColor="#1e1f1e" Loaded="ContentPage_Loaded" 
+             
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Click" Grid.Row="0" Grid.Column="1"  FontSize="25" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,50,40,0"  TextColor="#3FA8E3"></Label>
+            <Label Text="Free" Grid.Row="0" Grid.Column="1"  FontSize="25" HorizontalOptions="Center" VerticalOptions="Start" Margin="70,50,0,0" TextColor="White"></Label>
+            <Border Grid.Row="1" VerticalOptions="Start" Grid.Column="1" HorizontalOptions="Center" StrokeThickness="0"   HeightRequest="200"  Background="#2a2c30">
+                <Grid x:Name="tabcontrol">
+
+                    
+                            <StackLayout  x:Name="panel" Padding="5" Spacing="5">
+
+                                <Label Text="Quick Start Guide" CharacterSpacing="1" HorizontalOptions="Center" FontAttributes="Bold" TextColor="FloralWhite" Margin="0,10,0,05"></Label>
+                                <Label TextColor="Grey" Text="Tab Backup your photos and videos to USB to get started." CharacterSpacing="0.5" FontAttributes="Bold" Margin="7,10,0,0"></Label>
+                                <Label x:Name="label"  TextColor="Grey" LineBreakMode="WordWrap" CharacterSpacing="1"   Margin="7,0,0,0"  Text="The first backup can take a long time if you have a lot of pictures and videos.You can stop the backup at any time and next time it will resume where it left off.You can also transfer your media files to your computer by tapping on Backup your photos and videos to USB."></Label>
+
+                            </StackLayout>
+                     
+                            <StackLayout x:Name="submitEmail" IsVisible="false" Padding="5" Spacing="5">
+                             <Label x:Name="semail" CharacterSpacing="1" FontSize="18" Margin="0,10,0,05" Text="Submit Email" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"></Label>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="70*"/>
+                                        <ColumnDefinition Width="30*"/>
+                                    </Grid.ColumnDefinitions>
+                            <Entry WidthRequest="450" TextChanged="Entry_TextChanged" Background="#1e1f1e" Text="{Binding Email}" TextColor="White" HeightRequest="35" Grid.Row="0" Placeholder="Email" Grid.Column="0" Margin="10,10,0,0" HorizontalOptions="Start" VerticalOptions="Center"></Entry>
+                            <Button x:Name="submit" IsEnabled="false" Background="#3FA8E3" CornerRadius="20" Clicked="submit_Clicked"  Command="{Binding SubmitEmailCommand}"  HeightRequest="35" WidthRequest="100"   HorizontalOptions="End" Margin="0,10,20,0" Text="Submit" TextColor="White" Grid.Column="1" Grid.Row="0"></Button>
+                                    <Label x:Name="important" Grid.Row="1"  Margin="10,25,0,0" Grid.ColumnSpan="2" Text="IMPORTANT: We never see any of your pictures, contacts or information on your device.For more help or to ask us a question, simply enter your email now." TextColor="Gray" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+
+                                </Grid>
+                            </StackLayout>
+                    <StackLayout x:Name="suceessEmail" IsVisible="false">
+                        <Label Text="Submit Email" TextColor="White" FontAttributes="Bold" CharacterSpacing="1" FontSize="18"
+                                        HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0" />
+
+                        <Image Source="success.png" HeightRequest="50" WidthRequest="30" Margin="0,30,0,0" VerticalOptions="Center"></Image>
+
+                        <Label Text="Welcome email was sent" TextColor="White" FontSize="14" 
+                                       HorizontalOptions="Center"  VerticalOptions="End" Margin="0,20,0,0"
+                                        />
+                    </StackLayout>
+                    <StackLayout x:Name="contact" IsVisible="false" >
+                                <Label Text="Contact from" CharacterSpacing="1" VerticalOptions="Start" TextColor="White" HorizontalOptions="Center" Margin="0,20,0,0" FontAttributes="Bold"></Label>
+                        <Label Text="If you need help you can always reach us via:" VerticalOptions="Center"  HorizontalOptions="Center" Margin="0,40,0,0" TextColor="White"></Label>
+                        <Button Text="Contact Us"  Background="#3FA8E3" CornerRadius="20" Command="{Binding SendEmailCommand}" VerticalOptions="End" TextColor="White"  HorizontalOptions="Center" Margin="0,30,0,0"></Button>
+                            </StackLayout>
+                      
+                 
+                </Grid>
+            </Border>
+            <Button Text=">" Grid.Row="1" 
+                    Clicked="Button_Clicked" BackgroundColor="Transparent" BorderWidth="0" FontSize="Small" x:Name="next_page" FontAttributes="Bold" Grid.Column="2" Margin="0,10,0,0" HorizontalOptions="Center" VerticalOptions="Center" ></Button>
+            <Button Text="&lt;" Grid.Row="1" BackgroundColor="Transparent" BorderWidth="0" Clicked="previous_page_Clicked"
+                    x:Name="previous_page" FontSize="Small" FontAttributes="Bold" Grid.Column="0" Margin="0,10,0,0" VerticalOptions="Center" HorizontalOptions="Center" ></Button>
+            <Button Text="Start" Command="{Binding NavigateCommand}" Grid.Row="2" FontAttributes="Bold" Grid.Column="2" Margin="0,10,0,0" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="50" BorderWidth="0" BackgroundColor="Transparent" WidthRequest="180" TextColor="#3FA8E3" ></Button>
+        </Grid>
+    </VerticalStackLayout>
+
+
+
+</ContentPage>

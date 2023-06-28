@@ -1,0 +1,117 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickfree_Maui.Views.EraseDevice"
+             xmlns:vm="clr-namespace:clickfree_Maui.ViewModel" NavigationPage.HasNavigationBar="False" BackgroundColor="#2a2c30" NavigationPage.IconColor="White">
+    <ContentPage.BindingContext>
+        <vm:EraseDeviceVM/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <StackLayout Margin="0,50,0,0">
+            <Label Text="Erase your photos and videos" VerticalOptions="Start" HorizontalTextAlignment="Start"
+                   FontSize="20" Margin="120,0,0,0" TextColor="White" FontAttributes="Bold"/>
+            <Label Text="Select video and photo files to Erase" CharacterSpacing="1" Margin="120,5,0,0"  VerticalOptions="Start"
+                   FontSize="14" TextColor="White" />
+            <Grid  WidthRequest="481" HeightRequest="700"  VerticalOptions="Start" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="250" />
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <!--first list-->
+                <Grid Margin="5,0,0,0" Grid.Row="0" Grid.Column="0"  HorizontalOptions="StartAndExpand" >
+                    <Label  Text="ClickFree Folders" TextColor="White" VerticalOptions="StartAndExpand" FontSize="14" Margin="2,0,0,0" />
+                    <Button Text="Select All" TextColor="White" HorizontalOptions="End" Command="{Binding SelectAllCommand}"
+                        Margin="140,0,15,0" BackgroundColor="#3FA8E3"/>
+                </Grid>
+                <Border  Background="#1C1E20"
+                    Grid.Row="1" Grid.Column="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="2" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Rectangle Grid.Row="1" HorizontalOptions="StartAndExpand" VerticalOptions="Center"
+                        Fill="#33383E"/>
+                        <ListView x:Name="lbSource"  ItemSelected="lbSource_ItemSelected" Grid.Row="2" BackgroundColor="Black"
+                              SelectedItem="{Binding CurrentDirSelectedItem}"
+                             ItemsSource="{Binding CurrentDirList}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="{Binding Name}" FontSize="Micro" TextColor="White" Grid.Column="0" Margin="0,2,0,0" Grid.Row="0"  ></Label>
+                                            <Button Text="+" HeightRequest="20"  CornerRadius="0" WidthRequest="30" Padding="2" TextColor="#3FA8E3" Grid.Column="1"   Margin="45,02,02,02" Grid.Row="0" Command="{Binding Path=BindingContext.AddToSelectedCommand,Source={x:Reference lbSource}}" CommandParameter="{Binding}" BorderColor="#3FA8E3" BackgroundColor="Transparent"></Button>
+
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <!--<CollectionView x:Name="UsbListComboBox" Grid.Row="2" BackgroundColor="Beige" SelectionMode="Single" Width="650" Height="30" HorizontalOptions="Center" Margin="20" SelectionChanged="UsbListComboBox_SelectionChanged" >
+                    </CollectionView>-->
+                    </Grid>
+                </Border>
+                <!--separator-->
+                <Rectangle Grid.Row="1" Grid.Column="1" VerticalOptions="StartAndExpand" HorizontalOptions="Center"
+                       Fill="#33383E"/>
+                <!--selected list-->
+                <Grid Margin="5,0,0,0" Grid.Row="0" Grid.Column="2"  HorizontalOptions="StartAndExpand">
+                    <Label  Text="Erase Folders"  VerticalOptions="StartAndExpand" TextColor="White"  FontSize="14" Margin="2,0,0,0" />
+                    <Button Text="Clear All" TextColor="White" HorizontalOptions="End" Command="{Binding ClearAllCommand}"
+                        Margin="150,0,0,0" BackgroundColor="#3FA8E3"/>
+                </Grid>
+                <Border  Background="#1C1E20"
+                    Grid.Row="1" Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Start" Margin="5,0,0,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="2" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label Text="ClickFree" FontSize="14" LineHeight="20" TextColor="White" VerticalOptions="Center" Margin="11,2,0,0"
+                       />
+                        <Rectangle Grid.Row="1" HorizontalOptions="StartAndExpand" VerticalOptions="Center"
+                       Fill="#33383E"/>
+                        <ListView x:Name="lbSelected"  Grid.Row="2" BackgroundColor="Black"  ItemsSource="{Binding SelectedDirList}" SelectedItem="{Binding SelectedDirSelectedItem}" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate >
+                                    <ViewCell>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0"  FontSize="Micro" Margin="5" TextColor="White" Text="{Binding Name}" />
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </Border>
+                <Button x:Name="eraseBtn" TextColor="White" BackgroundColor="#3FA8E3" CornerRadius="20" IsEnabled="False"
+                Text="Erase" HeightRequest="40" WidthRequest="150" Margin="5" Command="{Binding EraseCommand}" VerticalOptions="Start" Grid.Row="2" Grid.ColumnSpan="3"/>
+            </Grid>
+           
+        </StackLayout>
+     
+  </StackLayout>
+</ContentPage>
