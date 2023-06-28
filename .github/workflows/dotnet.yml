@@ -20,7 +20,8 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-   
+    - name: Install MAUI WorkLoad
+      run: dotnet workload install maui
     - name: Build
-      run:  dotnet build clickfree_Maui/clickfree_Maui.csproj -c Release -f net6.0-windows10.0.19041.0 --no--restore
+      run:  dotnet build clickfree_Maui/clickfree_Maui.csproj -c Release -f net6.0-windows10.0.19041.0 
    
